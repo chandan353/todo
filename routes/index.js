@@ -2,7 +2,7 @@ var express = require('express')
 const Task  = require('../models/task');
 
 var router = express.Router()
-router.get('/', async function (req, res) {
+router.get('/todo', async function (req, res) {
   try {
     const tasks = await Task.find({});
     return res.render('index', {
